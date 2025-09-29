@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=67", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prayer-text-reformatter"
+version = "0.1.0"
+description = "CLI for reformatting prayer text into bullet point format"
+readme = "README.md"
+authors = [{name = "Prayer Text Reformatter"}]
+requires-python = ">=3.9"
+
+[project.scripts]
+prayer-text-reformatter = "prayer_text_reformatter.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
